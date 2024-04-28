@@ -16,14 +16,19 @@ Etapas realizas:
            curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
             sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
             kubectl version --client
+    - DOCKER
+
+            curl -fsSL https://get.docker.com -o get-docker.sh
+            sh get-docker.sh
+            
 - Comandos utilizados para criar o Cluster e Pod
 
     - COMANDOS 
-
+            
             Kind create cluster --config Cluster.yaml
             kubectl create -f pod.yaml
     - VERIFICAÇÃO DO CLUSTER E POD. 
-
+            
             kind get clusters
             kubectl get pods                 
 </h1>
